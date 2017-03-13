@@ -1,0 +1,23 @@
+Lakukan Penulusuran DFS dengan menggunakan algoritma Recursive
+untuk studi kasus 8-puzzle kriteria penilaian Tugas adalah:
+
+Kondisi Awal :
+321
+504
+678
+
+Goal State:
+123
+456
+780
+
+Operator 1 : Swap Keatas
+Operator 2 : Swap Kekanan
+Operator 3 : Swap Kebawah
+Operator 4 : Swap kekiri
+
+1. (20) Cetak di Layar Kondisi Per-state
+2. (20) Operator sesuai
+3. (20) Kondisi Awal Sesuai dengan kriteria
+4. (20) Menggunakan Recursive
+5. (20) Flag No Return
