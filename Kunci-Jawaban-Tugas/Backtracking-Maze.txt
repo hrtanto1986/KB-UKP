@@ -1,0 +1,95 @@
+#include<stdio.h>
+#include<conio.h>
+#include<iostream>
+#define N 4
+#define M 5
+
+using namespace std;
+
+typedef struct maze_pos {
+   // 'x' and 'y' coordinates on chess board
+   int x,y;
+}maze_pos;
+
+void printMap(char Map[N][M]) {
+   int i,j;
+   for (i = 0; i < N; i++) {
+      for (j = 0; j < M; j++) {
+          cout<<Map[i][j]<<"\t";
+      }
+      cout<<endl;
+   }
+   cout<<endl;
+   getch();
+}
+
+bool isPossible(maze_pos mpos,char map[4][5])
+{
+	if ((mpos.x >=0 && mpos.x <= 3) && (mpos.y >= 0 && mpos.y <= 4) && (map[mpos.x][mpos.y] == '0' || map[mpos.x][mpos.y] == 'X'))
+	{
+		return true;
+	}else{
+		return false;
+	}
+}
+bool isTried(maze_pos mpos,char map[4][5])
+{
+	if ((mpos.x >=0 && mpos.x <= 3) && (mpos.y >= 0 && mpos.y <= 4) && (map[mpos.x][mpos.y] == '.'))
+	{
+		return true;
+	}else{
+		return false;
+	}
+}
+
+bool solveMaze(char map[4][5],maze_pos move[],maze_pos currpos,int move_count)
+{
+	maze_pos next_move;
+	printMap(map);
+	if ((currpos.x==3) && (currpos.y==4))
+	{
+		map[currpos.x][currpos.y] = '8';
+		return true;
+	}else
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			next_move.x = currpos.x + move[i].x;
+			next_move.y = currpos.y + move[i].y;
+			if (isTried(next_move,map))
+			{
+				return false;
+			}
+			if (isPossible(next_move,map))
+			{
+				map[currpos.x][currpos.y] = '.';
+				map[next_move.x][next_move.y] = '8';
+				if (solveMaze(map,move,next_move,move_count+1) == true)
+				{
+					return true;
+				}else
+				{
+					map[currpos.x][currpos.y] = '8';
+					map[next_move.x][next_move.y] = '.';
+					printMap(map);
+				}
+
+			}
+		}
+	}
+	return false;
+}
+
+int main()
+{
+	char zz[4][5] = {
+		{'8','0','0','0','0'},
+		{'0','1','0','1','0'},
+		{'0','0','1','0','1'},
+		{'0','0','0','0','X'}
+	};
+	maze_pos current = {0,0};
+	maze_pos moves[4] = {{0,1},{1,0},{0,-1},{-1,0}};
+	//printMap(zz);
+	solveMaze(zz,moves,current,0);
+}
