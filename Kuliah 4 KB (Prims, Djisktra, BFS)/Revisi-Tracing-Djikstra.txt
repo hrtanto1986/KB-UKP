@@ -1,0 +1,107 @@
+Diberikan Gambar sebagai berikut.
+       6
+A ---------- B --\
+|          / |    \5
+|         /  |     \
+|     /---   |      \
+|1   / 2     |2      C
+|   /        |      /
+|  /         |     /5
+| /          |    /
+D ---------- E --/
+       1
+
+
+Iterasi 0
+
+Initial
+Visited = {}
+Unvisited = {A,B,C,D,E}
+
+Vertex   | Distance | Prev Vert.
+   A          0          -
+   B          ~
+   C          ~
+   D          ~
+   E          ~
+
+Iterasi 1
+---------
+
+Current = A
+Visited = {A}
+Unvisited = {B,C,D,E}
+
+Opt 1 = B (0+6) = 6
+Opt 2 = D (0+1) = 1
+
+Vertex   | Distance | Prev Vert.
+   A          0
+   B          6          A
+   C          ~ 
+   D          1          A
+   E          ~        
+
+Iterasi 2
+---------
+
+Current = D
+Visited = {A,D}
+Unvisited = {B,C,E}
+
+Opt 1 = B (1+2) = 3
+Opt 2 = E (1+1) = 2
+
+Vertex   | Distance | Prev Vert.
+   A          0
+   B          3          D
+   C          ~ 
+   D          1          A
+   E          2          D
+
+Iterasi 3
+---------
+ 
+Current = E
+Visited = {A,D,E}
+Unvisited = {B,C}
+
+Opt 1 = B (1+1+2) = 4
+Opt 2 = C (1+1+5) = 7
+
+Vertex   | Distance | Prev Vert.
+   A          0
+   B          3          D
+   C          7          E
+   D          1          A
+   E          2          D
+
+Iterasi 4
+---------
+
+Current = B
+Visited = {A,D,E,B}
+Unvisited = {C}
+
+Opt1 = C (1+2+5) = 8
+
+Vertex   | Distance | Prev Vert.
+   A          0
+   B          3          D
+   C          7          E
+   D          1          A
+   E          2          D
+
+
+
+Keterangan:
+1. Opt adalah option jalan yang bisa dipilih pada waktu visit di current
+2. Tidak Perlu Result
+3. Perhatikan Cara Penambahan Jaraknya
+
+
+      
+
+
+
+
