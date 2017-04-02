@@ -1,0 +1,7 @@
+Keterangan File:
+1. PSO.pdf (ini teori konsep PSO)
+2. pyswarm.py (contoh program PSO)
+3. swarm.mp4 (ini visualisasi Cara Kerja PSO)
+
+
+https://github.com/inyoot/KB/tree/master/PSO
