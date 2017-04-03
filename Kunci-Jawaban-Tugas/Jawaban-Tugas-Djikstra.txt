@@ -1,0 +1,5 @@
+Surabaya	0
+Sidoarjo	6
+Mojokerto	7
+Malang		8
+Pasuruan	13
