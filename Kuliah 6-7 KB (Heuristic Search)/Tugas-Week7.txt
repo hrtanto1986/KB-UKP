@@ -1,0 +1,25 @@
+Tugas Untuk Deadline Minggu 07-05-2017
+--------------------------------------
+
+1. Buatlah Program Simulated Annealing untuk n-queen
+	Step 1: Masukan nilai n-queen = 1-8 
+		8-queen maka membentuk kotak 8x8 dengan queen pada masing-masing
+                kolom
+        Step 2: Output Per Iterasi adalah suhu (T), Energi, nilai P
+        Step 3: Gunakan fungsi Evaluasi Heuristic N-queen = Jumlah Clash
+   Operator next = random row position for each column
+
+2. Buatlah Program Hill Climbing untuk sudoku 4x4
+        Step 1: Init. angka 1-4 random masing2 angka hanya bisa 4 kali penempatan
+        Step 2: Output per iterasi adalah fungsi heuristic sudoku (cari sendiri)
+   Operator next = swap cell[random(row)][random(col)] with cell[random(row)]		   [random(col)] 
+
+3. Buatlah Program untuk Best First Search A* 8 puzzle
+   dimana start state adalah
+   Start  Goal    
+   817    123
+   325    804
+   460    765
+
+   Step1: Output per iterasi adalah nilai limit, priority queue, kondisi puzzle           pada current state
+   Step2: Fungsi Heuristic = manhantan distance
