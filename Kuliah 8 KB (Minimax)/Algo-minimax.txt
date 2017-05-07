@@ -1,0 +1,35 @@
+Minimax(Position,Depth,Player)
+
+1. IF DEEP ENOUGH(Position,depth), then return structure
+      value = STATIC(position,player)
+      path = nil
+   THIS INDICATES THAT THERE IS NO PATH FROM THIS NODE AND THAT ITS VALUE IS THAT
+   DETERMINED BY THE STATIC EVALUATION FUNCTION
+
+2. otherwise, generate one more ply of the tree by calling the Function
+   MOVE-GEN(POSITION,PLAYER) and setting SUCESSORS to the list it returns
+
+3. If SUCESSORS is empty, then there are no moves to be made, so return the same
+   structure that ould have been returned if DEEP-ENOUGH had returned true.
+
+4. IF SUCESSORS is not empty, then examine each element in turn and keep track of     the best one. This is done by.
+
+   Initialize Best-Score to the minimum value
+
+   FOR Each element SUCC of SUCCESSORS, do:
+   a. Set Result-SUCC to
+          MINIMAX(SUCC,Depth+1,OPPOSITE(PLAYER))
+   This recursive call to MINIMAX ill actually carry out the exploration of           SUCC
+
+   b. Set New Value = Value(RESULT-SUCC)
+
+   c. IF NEW-VALUE > BEST-SCORE
+      i.  BEST SCORE = NEW VALUE
+      ii. The best known path is now from CURRENT to SUCC and then on to the              appropriate path down from SUCC as determined by the recursive call to           MINIMAX. So Set BEST-PATH to the result of attaching SUCC to the            front PATH(RESULT-SUCC)
+
+5. Now that all the successors have been examined, we know the value of Position      as well as which path to take from it So Return structure
+
+   value = BEST-SCORE
+   path = BEST-PATH
+
+ 

@@ -1,0 +1,19 @@
+TUGAS TIC TAC TOE MINIMAX
+-------------------------
+
+Buatlah Aplikasi Player vs AI
+algoritma minimax
+
+  |  |
+---------
+  |  |
+---------
+  |  |
+
+O adalah Player
+X adalah AI
+
+Input O Row    = 0 (0-2)  
+Input O Column = 0 (0-2)
+
+
