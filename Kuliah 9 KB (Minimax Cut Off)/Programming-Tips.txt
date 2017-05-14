@@ -1,3 +1,13 @@
 1. Tipe Data SUCCESSORS LIST (C++)
 
 std::vector<std::array<char,char>>
+
+2. Deep-enough dari Heuristic yg baru bisa dipastikan Tree nya punya depth
+   yg rata karena pada setiap state masih ada value EVALUATION 
+
+3. Deep-enough dari Heuristic yg lama win-lose belum tentu setiap branchnya punya    depth yang sama karena ada state yg belom terlihat kondisi win-lose-nya       sehingga transversal tree akan sampai pada depth yg ada value-nya yaitu +10 -   10 dan 0 untuk draw
+
+4. Deep-enough heuristic value yg baru bisa diatur menjadi suatu parameter berupa    angka yg merupakan depth dari tree transversal(bisa-2 atau 3) tergantung       kebutuhan  dan resource komputer.
+
+
+
