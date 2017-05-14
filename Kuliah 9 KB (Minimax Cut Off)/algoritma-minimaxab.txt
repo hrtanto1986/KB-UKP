@@ -23,7 +23,7 @@
 3.		EVALUATION(state),state // Value of Heuristic Function 	
 4.  v <- +Infinity
 5.  For Each SUCC in SUCCESSORS
-6.  	 v <- MIN from v or MAX-VALUE(SUCC, -Infinity, +Infinity)
+6.  	 v <- MIN from v or MAX-VALUE(SUCC, -Infinity, +Infinity) 
 7.       If V <= Alpha then return v
 8.       Beta = MIN from Beta or V
 9.  Return V
