@@ -1,0 +1,12 @@
+Gunakan Fungsi Heuristic Tic Tac Toe
+
+E(state) = X(n) - O(n)
+
+X = Possible state X Win
+O = Possible state O Win
+
+1.Gunakan Algoritma Heuristic tersebut pada Algoritma Minimax Alpa     Beta Untuk Mencari langkah AI yang harus diambil setiap Turn    (Giliran) melawan player human.
+
+2.Gunakan Algoritma Heuristic tersebut pada algoritma minimax Alpha   Beta untuk mencari langkah AI yang harus diambil setiap turn     melawan player AI pada algoritma minimax biasa pada heuristic +10 0   dan -10
+
+3. Bandingkan mana yang lebih baik.

@@ -1,0 +1,42 @@
+-Infinity The Minimum Score Computer can Compute
++Infinity The Maximum Score Computer can Compute
+
+1. Function Alpha Beta Search(State) return an action
+2. v <- MAX-VALUE(state, -Infinty,+Infinity)
+3. return the action in ACTIONS(state) with value v
+
+
+1.  Function MAX-VALUE(State,Alpha,Beta) return a value with state
+2. 	IF DEEP-ENOUGH return 
+3.		EVALUATION(State), //Value of Heuristic Function
+4.		STATE
+5.  v <- -(Infinity)
+6.  For each SUCC in SUCCESSORS
+7.   	 v <- MAX from v or MIN-VALUE(SUCC, -Infinity, +Infinity)
+8.	 if v >= Beta then return v
+9.	 Alpha = MAX from Alpha or V
+10. Return V
+
+
+1.  Function MIN-VALUE(State,Alpha,Beta) return a value with state
+2.  	IF DEEP-ENOUGH return
+3.		EVALUATION(state),state // Value of Heuristic Function 	
+4.  v <- +Infinity
+5.  For Each SUCC in SUCCESSORS
+6.  	 v <- MIN from v or MAX-VALUE(SUCC, -Infinity, +Infinity)
+7.       If V <= Alpha then return v
+8.       Beta = MIN from Beta or V
+9.  Return V
+
+
+1. Function MAX(val1,val2) return biggest value
+2. 	if val1 >= Val2 return val1 else return val2
+
+1. Function Min(val1,val2) return smallest value
+2. 	if val1 =< Val2 return val1 else return val2
+
+
+	
+
+
+
