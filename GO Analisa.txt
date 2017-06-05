@@ -1,0 +1,52 @@
+Dikumpulkan minggu-2 UAS hari Sabtu
+(TGL Menyusul)
+-----------------------------------
+
+Ukuran Board bisa diubah dengan mengubah dimensi width dan height dari board
+
+Function yg disediakan untuk menjalankan AI dari GO Chess
+  Function Foo
+  Function Bar 
+
+Cara Menjalankan:
+1. Download Phyton Versi 2.7 
+2. Jalankan SSH milik UKP dan jalankan Main.py
+3. Main.py ada input untuk posisi Black dan White
+   Black Posisi Row = ?
+   Black Posisi Col = ?
+
+Analisa Project GO PHYTON:
+1. Kriteria Win/Lose
+   -----> Dari Jumlah Bidak Hitam / Putih
+2. Maximum 5s untuk Tree Search kalau lebih dianggap pass
+3. Kalau sudah Pass 3x dianggap pemain tsb kalah
+
+Metode dan Penilaian :
+1. Monte Carlo Search Tree             (Nilai 100) 
+   ----> Minimax ditambahkan simulasi untuk pemilihan cadidat
+         Open Source bisa ambil ke Fuego
+   Open Source Fuego Tested and Working (<10s untuk Tree Trasversal ukuran 9x9)
+
+2. Minimax Std (3x3)                   (Nilai 100)
+   ----> Heuristic
+                1. Array Board Values (Dinamis Kalau ada yg diinput ke board Ubah)
+                         |10  |8   |10  |
+                         |8   |5   |8   |
+                         |10  |8   |10  |
+                
+		2. Berusaha Mengepung lawan yg tidak di kerumunan
+		
+		3. Kalau tidak ada yg dikerumunan maka berlakukan heuristic board 
+                   yg no 1.
+
+3. Error AI                            (Nilai 0)
+   ---> Sama Sekali tidak jalan 
+
+4. AI Kalah Terus -- 5x percobaan      (Nilai 50)
+   ---> Jumlah Difference >70
+
+
+Resource untuk Monte Carlo Search Tree:
+1. FueGO
+2. AlphaGO
+
